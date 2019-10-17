@@ -3,8 +3,7 @@ import drawCircle from './utilities/canvasLoadAnimations';
 
 function Mem(props) {
   // console.log(props);
-  let test2 = 'randomname2';
-  const {totalMem, usedMem, memUsage, freeMem, memWidgetId} = props.memData;
+  const {totalMem, memUsage, freeMem, memWidgetId} = props.memData;
   let canvas = document.querySelector(`.${memWidgetId}`);
 
   drawCircle(canvas, memUsage*100);

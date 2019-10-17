@@ -5,8 +5,8 @@ import Info from './Info';
 import './Widget.css';
 import uuid from 'uuid/v4';
 
-const cpuWidgetId = uuid();
-const memWidgetId = uuid();
+const cpuWidgetId = 'cpu' + uuid();
+const memWidgetId = 'mem' + uuid();
 
 class Widget extends Component {
   constructor(props) {

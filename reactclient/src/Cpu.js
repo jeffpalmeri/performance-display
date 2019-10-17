@@ -2,7 +2,6 @@ import React from 'react';
 import drawCircle from './utilities/canvasLoadAnimations';
 
 function Cpu(props) {
-  let test = 'randomClassName';
   let canvas = document.querySelector(`.${props.cpuData.cpuWidgetId}`);
   drawCircle(canvas, props.cpuData.cpuLoad);
   console.log(props.cpuData.cpuWidgetId);
