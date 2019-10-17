@@ -1,6 +1,5 @@
 function drawCircle(canvas,currentLoad){
   if(canvas){
-      console.log(canvas);
       let context = canvas.getContext('2d');
       // Draw Inner Circle
       context.clearRect(0,0,500,500)

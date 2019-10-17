@@ -6,8 +6,8 @@ function Info(props){
     <div className="col-sm-3 col-sm-offset-1 cpu-info">
       <h3>Operating System</h3>
       <div className="widget-text">{props.infoData.osType}</div>
-      <h3>Time Online</h3>
-      <div className="widget-text">{moment.duration(props.infoData.uptime).humanize()}</div>
+      <h3>Computer Uptime</h3>
+      <div className="widget-text">{moment.duration(props.infoData.uptime, 'seconds').humanize()}</div>
       <h3>Processor information</h3>
       <div className="widget-text"><strong>Type:</strong> {props.infoData.cpuModel}</div>
       <div className="widget-text"><strong>Number of Cores:</strong> {props.infoData.numCores}</div>

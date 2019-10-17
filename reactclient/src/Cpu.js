@@ -4,7 +4,7 @@ import drawCircle from './utilities/canvasLoadAnimations';
 function Cpu(props) {
   let canvas = document.querySelector(`.${props.cpuData.cpuWidgetId}`);
   drawCircle(canvas, props.cpuData.cpuLoad);
-  console.log(props.cpuData.cpuWidgetId);
+  // console.log(props.cpuData.cpuWidgetId);
   
   return(
     <div className="col-sm-3 cpu">

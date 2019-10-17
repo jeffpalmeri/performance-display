@@ -31,7 +31,6 @@ class App extends Component {
     const data = this.state.performanceData;
     // get each machine, by property, from data
     Object.entries(data).forEach(([key, value]) => {
-      console.log(key,value, '*****');
       widgets.push(<Widget key={key} data={value}/>);
     });
 
