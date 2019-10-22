@@ -26,3 +26,15 @@ Then, you will need to open three terminal windows.
 3. Finally, in the third terminal, cd into the ```reactclient``` directory and run the command ```npm start```
 
 As long as your MongoDB and Redis servers are running, the app will open in your browser!
+
+![online](https://res.cloudinary.com/jeffpalmeri/image/upload/v1571760185/online.png)
+
+If you shut down the nodeClient server, you will immediatly see the offline text pop up and the canvas animations will stop.
+
+![offline](https://res.cloudinary.com/jeffpalmeri/image/upload/v1571760197/offline.png)
+
+Then, fire up the nodeClient server again and you will reconnect to the same worker thread!. You'll see the offline text disapear and the canvas animation will start back up, since data is being emmited from the nodeClient once again.
+
+![backOnline!](https://res.cloudinary.com/jeffpalmeri/image/upload/v1571760185/online.png)
+
+If Redis was not being used in this project, then reconnecting the nodeClient server would open a new socket connection unnecessarily (as mentioned above in the summary section). This would result in a new Widget component being rendered to the screen every time. The 'offline' text would never disapear, and data updates would no longer be reflected in the original Widget component's canvas animations.
