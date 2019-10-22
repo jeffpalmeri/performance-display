@@ -5,7 +5,7 @@ CPU usage, memory usage, and other info about all connected clients are collecte
 
 # Summary
 
-Computer performance data is collected by the node client(s), and sent to the server on an interval with socket.io. The server then sends out this data to the connected clients, again with socket.io, and displays the data on the front-end with react and html5 canvas animations. Seems simple so far, but things get a little bit trickier...
+Computer performance data is collected by the node client(s), and sent to the server on an interval with socket.io. The server then sends out this data to the connected clients, again with socket.io, and displays the data on the front-end with react and HTML5 canvas animations. Seems simple so far, but things get a little bit trickier...
 
 For performance optimization, the node.js cluster module is used so that the program can run multiple times on multiple threads. This complicates things becuase if a node client get disconnected and tries to reconnect, it cannot reliably find it's way back to the same worker node it was previously utilizing. If the client reconnects to a different worker, a new socket connection will be created unnecessarily. 
 
