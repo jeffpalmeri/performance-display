@@ -37,4 +37,4 @@ Then, fire up the nodeClient server again and you will reconnect to the same wor
 
 ![backOnline!](https://res.cloudinary.com/jeffpalmeri/image/upload/v1571760185/online.png)
 
-If Redis was not being used in this project, then reconnecting the nodeClient server would open a new socket connection unnecessarily (as mentioned above in the summary section). This would result in a new Widget component being rendered to the screen every time. The 'offline' text would never disapear, and data updates would no longer be reflected in the original Widget component's canvas animations.
+If Redis was not being used in this project, then reconnecting the nodeClient server would open a new socket connection unnecessarily (as mentioned above in the summary section). This would result in an additional Widget component being rendered to the screen every time. The 'offline' text would never disapear, and data updates would no longer be reflected in the original Widget component's canvas animations.
